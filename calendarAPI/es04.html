@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Esercizio 4</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <h1>Esercizio 4</h1>
+            </div>
+        </div>
+        <div class="row needs-validation">
+            <div class="col-sm-4">
+                <div class="mb-3">
+                  <label for="" class="form-label">Numero</label>
+                  <input type="text"
+                    class="form-control" name="" id="n1" placeholder="">
+                    <div class="invalid-feedback">Inserire un numero intero</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Numero</label>
+                    <input type="text"
+                      class="form-control" name="" id="n2" placeholder="">
+                    <div class="invalid-feedback">Inserire un numero intero</div>
+                  </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="" class="form-label">Numero</label>
+                    <input type="text"
+                      class="form-control" name="" id="n3" placeholder="">
+                    <div class="invalid-feedback">Inserire un numero intero</div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-success" id="min-btn">Calcola minimo</button>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-success" id="max-btn">Calcola massimo</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="result">
+
+            </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script>
+    
+    $("#min-btn").on({
+        click : function() {
+            let numbers = [$("#n1").val(), $("#n2").val(), $("#n3").val()];
+
+            for(n of numbers) {
+                if(n == "" || isNaN(n) || parseInt(n) != n) {
+                    $("#n1").addClass("is-invalid");
+                    $("#n2").addClass("is-invalid");
+                    $("#n3").addClass("is-invalid");
+                    return;
+                }
+            }
+
+            $("#n1").removeClass("is-invalid");
+            $("#n2").removeClass("is-invalid");
+            $("#n3").removeClass("is-invalid");
+
+            let min = numbers.reduce((a, b) => Math.min(a, b), +Infinity);
+            $("#result").text("Il valore minimo è " + min)
+        }
+    })
+
+    $("#max-btn").on({
+        click : function() {
+            let numbers = [$("#n1").val(), $("#n2").val(), $("#n3").val()];
+
+            for(n of numbers) {
+                if(n == "" || isNaN(n) || parseInt(n) != n) {
+                    $("#n1").addClass("is-invalid");
+                    $("#n2").addClass("is-invalid");
+                    $("#n3").addClass("is-invalid");
+                    return;
+                }
+            }
+
+            $("#n1").removeClass("is-invalid");
+            $("#n2").removeClass("is-invalid");
+            $("#n3").removeClass("is-invalid");
+
+            let max = numbers.reduce((a, b) => Math.max(a, b), -Infinity);
+            $("#result").text("Il valore massimo è " + max)
+        }
+    })
+  </script>
+</body>
+
+</html>
