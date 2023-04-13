@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Esercizi JavaScript</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="Lib_JS.js"></script>
+    </head>
+    <body style="background-color: bisque;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center" style="font-size: 30px"><strong>Esercizio 1</strong></p>
+                    <p class="text-center"><i>Questo esercizio prende in input e restituisce 0 (pari) o 1 (dispari).</i></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                        <p class="text-center"><strong><i>INPUT</i></strong></p>
+                        <p class="text-justify"><strong>Inserisci il numero</strong>: <input type="text" id="n1" onKeyUp='isPari()'></p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <p class="text-center"><strong><i>OUTPUT</i></strong></p>
+                        <p class="text-center"><input type="text" id="o1" readonly></p>
+                    </div>
+            </div> 
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center" style="font-size: 30px"><strong>Esercizio 2</strong></p>
+                    <p class="text-center"><i>Questo esercizio prende in input l'anno corrente e l'anno di nascita di una persona
+                        e calcola la sua età e quanti anni mancano prima che faccia 100 anni.
+                    </i></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center"><strong><i>INPUT</i></strong></p>
+                    <p class="text-justify"><strong>Anno Corrente</strong>: <input type="text" id="ac"></p>
+                    <p class="text-justify"><strong>Anno di nascita</strong>: <input type="text" id="an"></p>
+                    <p class="text-justify"><button onClick='calcolaAnni()'>Calcola</button></p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center"><strong><i>OUTPUT</i></strong></p>
+                    <p class="text-justify"><strong>Età</strong>: <input type="text" id="o2"></p> 
+                    <p class="text-justify"><strong>Quanto mi manca per i 100?</strong> <input type="text" id="o3"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center" style="font-size: 30px"><strong>Esercizio 3</strong></p>
+                    <p class="text-center"><i>Questo esercizio prende in input la data corrente e la data di nascita di una persona e calcola
+                        quanti anni ha vissuto tale persona.
+                    </i></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center"><strong><i>INPUT</i></strong></p>
+                    <p class="text-justify"><strong>Data odierna</strong>: <input type="date" id="today"></p>
+                    <p class="text-justify"><strong>Data di nascita</strong>: <input type="date" id="birth"></p>
+                    <p class="text-justify"><button onClick='calcolaGiorni()'>Calcola</button></p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center"><strong><i>OUTPUT</i></strong></p>
+                    <p class="text-justify"><strong>Giorni di vita</strong>: <input type="text" id="tot"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center" style="font-size: 30px"><strong>Esercizio 4</strong></p>
+                    <p class="text-center"><i>Questo esercizio prende in input tre numeri e restituisce il maggiore e il minore dei tre.
+                    </i></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center"><strong><i>INPUT</i></strong></p>
+                    <p class="text-justify"><strong>Primo numero</strong>: <input type="text" id="a"></p>
+                    <p class="text-justify"><strong>Secondo numero</strong>: <input type="text" id="b"></p>
+                    <p class="text-justify"><strong>Terzo numero</strong>: <input type="text" id="c"></p>
+                    <p class="text-justify"><button onClick='calcolaMinMax()'>Calcola</button></p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-center"><strong><i>OUTPUT</i></strong></p>
+                    <p class="text-justify"><strong>Minimo</strong>: <input type="text" id="min"></p> 
+                    <p class="text-justify"><strong>Massimo</strong>: <input type="text" id="max"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
