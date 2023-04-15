@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Menu</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .cart-link {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding-right: 2em;
+        padding-bottom: 2em;
+        z-index: 1;
+      }
+
+      .cart-btn {
+        border-radius: 100%;
+        background-color: #85a08e;
+        color: whitesmoke;
+        border-color: #456d52;
+        padding: 10px 10px 10px 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="fixed-top align-items-center text-center">
+      <div class="container-fluid bg-white">
+        <a href="#">
+          <img src="./logo.png" class="img-fluid rounded pt-3" alt="" />
+        </a>
+      </div>
+    </header>
+    <main class="mt-5 pt-5">
+      <a class="cart-link" href="cart.html">
+        <button class="btn cart-btn shadow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-basket"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"
+            />
+          </svg>
+        </button>
+      </a>
+
+      <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Stuzzichini
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body ps-5 pe-5">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>001</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Tarallini</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Tarallini</span>
+                    <h5 class="ps-4">&euro;2,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./Tarallini.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      id="tarallini-btn"
+                    >
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>002</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Olive</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Olives</span>
+                    <h5 class="ps-4">&euro;2,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img src="./olive.jpg" class="img-fluid rounded" alt="" />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>003</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Anacardi</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Cashews</span>
+                    <h5 class="ps-4">&euro;2,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./anacardi.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>004</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Mandorle</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Almonds</span>
+                    <h5 class="ps-4">&euro;2,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./mandorle.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                Antipasti
+              </button>
+            </h2>
+
+            <!-- Antipasti -->
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>001</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Chips di patate</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Potato chips</span>
+                    <h5 class="ps-4">&euro;4,00</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img src="./chips.jpg" class="img-fluid rounded" alt="" />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>002</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Croccante di patate</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Potato crisp</span>
+                    <h5 class="ps-4">&euro;6,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./crocchette.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>003</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Panzerottini Artigianali</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Homemade little panzerotti</span>
+                  </div>
+                  <div class="col-sm-6 ps-2 pt-2 text-end">
+                    <img
+                      src="./panzerottini.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-3">
+                  <div class="col-sm-12">
+                    <span class="h4 ms-2">&euro;5,00</span>
+                    <button type="button" class="btn btn-success ms-5">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>004</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Straccetti di pollo</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Pulled chicken</span>
+                    <h5 class="ps-4">&euro;5,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./straccetti di pollo.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>001</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Straccetti di vitello</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Pulled veal</span>
+                    <h5 class="ps-4">&euro;6,00</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./straccetti di vitello.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>006</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Pettoline</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Batter puffs</span>
+                    <h5 class="ps-4">&euro;4,00</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./pettoline.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>001</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="ps-2">Verdure pastellate</h4>
+                    <img
+                      src="./gb.svg"
+                      class="img-fluid rounded ms-2"
+                      style="height: 16px; width: 16px"
+                      alt=""
+                    />
+                    <span>Battered veggies</span>
+                    <h5 class="ps-4">&euro;5,50</h5>
+                  </div>
+                  <div class="col-sm-6 ps-2 text-end">
+                    <img
+                      src="./verdure pastellate.jpg"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="row pt-2">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-success">
+                      Aggiungi
+                    </button>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+                Sfizi
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                This is the first item's accordion body.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="alert"
+        class="alert alert-success alert-dismissible fade show"
+        role="alert"
+      >
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+        <strong>Prodotto aggiunto all'ordine</strong> Il prodotto è stato
+        aggiunto all'ordine.
+      </div>
+    </main>
+    <footer></footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

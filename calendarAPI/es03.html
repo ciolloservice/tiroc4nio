@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Esercizio 3</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Esercizio 3</h1>
+                <h2>Inserire la propria data di nascita</h2>
+            </div>
+        </div>
+        <div class="row needs-validation">
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="day" class="form-label">Giorno</label>
+                    <select class="form-select form-select-lg" name="day" id="day">
+                        <option value="0">Giorno</option>
+                    </select>
+                    <div class="invalid-feedback">Inserire l'anno!</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="day" class="form-label">Mese</label>
+                    <select class="form-select form-select-lg" name="month" id="month">
+                        <option value="0">Mese</option>
+                    </select>
+                    <div class="invalid-feedback">Inserire l'anno!</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="day" class="form-label">Anno</label>
+                    <select class="form-select form-select-lg" name="year" id="year">
+                        <option value="0">Anno</option>
+                    </select>
+                    <div class="invalid-feedback">Inserire l'anno!</div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-primary" id="btn">Calcola</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="result">
+
+            </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script>
+    for(let i = 1; i <= 31; i++) {
+        $("#day").append("<option value='" + i + "'>" + i + "</option>")
+    }
+
+    let months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+    for(let m in months) {
+        $("#month").append("<option value='" + m + "'>" + months[m] + "</option>")
+    }
+
+    for(let i = 1870; i < 2024; i++) {
+        $("#year").append("<option value='" + i + "'>" + i + "</option>")
+    }
+    
+    
+    $("#btn").on({
+        click : function() {
+            let day = $("#day").val();
+            let month = $("#month").val();
+            let year = $("#year").val();
+
+            if(day == 0) {
+                $("#day").addClass("is-invalid")
+                return;
+            } else if(month == 0) {
+                $("#month").addClass("is-invalid");
+                return;
+            } else if(year == 0) {
+                $("#year").addClass("is-invalid");
+                return;
+            } else {
+                $("#day").removeClass("is-invalid");
+                $("#month").removeClass("is-invalid");
+                $("#year").removeClass("is-invalid");
+
+                let today = new Date();
+
+                let utc1 = Date.UTC(year, month, day);
+                let utc2 = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+
+                if(utc1 > utc2) {
+                    alert("La data di nascita deve essere antecedente a quella odierna!")
+                }
+                console.log(utc1 + " " + utc2);
+                $("#result").text("Hai vissuto " + Math.floor((utc2 - utc1) / (24*60*60*1000)) + " giorni")
+            }
+        }
+    })
+  </script>
+</body>
+
+</html>
